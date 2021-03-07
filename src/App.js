@@ -5,7 +5,7 @@ console.log(styles);
 
 function App() {
   return (
-    <div className={styles.box}>
+    <div className={[styles.box, styles.blue].join(' ')}>
       
     </div>
   );
