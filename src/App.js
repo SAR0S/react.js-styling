@@ -1,15 +1,14 @@
 import React from 'react';
 import styles from './App.module.css';
-import ConditionalRendering from './components/conditionalRendering/ConditionalRendering'
+import TodoListTemplate from './components/TodoList/TodoListTemplate';
 
 console.log(styles);
 
 function App() {
   return (
-    // <div className={[styles.box, styles.blue].join(' ')}>
-    <div>
-      <ConditionalRendering/>
-    </div>
+    <TodoListTemplate>
+        템플릿 완성
+    </TodoListTemplate>
   );
 }
 
