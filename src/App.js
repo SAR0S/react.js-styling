@@ -1,15 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styles from './App.module.css';
 import TodoListTemplate from './components/TodoList/TodoListTemplate';
+import Form from './components/TodoList/components/Form';
 
-console.log(styles);
-
-function App() {
-  return (
-    <TodoListTemplate>
-        템플릿 완성
-    </TodoListTemplate>
-  );
+class App extends Component {
+  render() {
+      return (
+        <TodoListTemplate form={<Form/>}>
+            템플릿 완성
+        </TodoListTemplate>
+      );
+  }
 }
 
 export default App;
