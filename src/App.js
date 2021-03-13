@@ -5,6 +5,7 @@ import Form from './components/TodoList/components/Form/Form';
 import TodoItemList from './components/TodoList/components/TodoItemList/TodoItemList';
 
 class App extends Component {
+  
   id = 3
 
   state = {
@@ -41,7 +42,7 @@ class App extends Component {
   }
 
   render() {
-    const { input } = this.state;
+    const { input, todos } = this.state;
     const {
       handleChange,
       handleCreate,
@@ -56,7 +57,7 @@ class App extends Component {
             onChange={handleChange}
             onCreate={handleCreate}/>
         )}>
-            <TodoItemList />
+            <TodoItemList todos={todos}/>
         </TodoListTemplate>
       );
   }

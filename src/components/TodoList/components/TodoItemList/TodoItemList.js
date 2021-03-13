@@ -5,11 +5,22 @@ class TodoItemList extends Component {
     render() {
         const { todos, onToggle, onRemove } = this.props;
 
+        const todoList = todos.map(
+            ({id, text, checked}) => (
+                <TodoItem 
+                    id={id}
+                    text={text}
+                    checked={checked}
+                    onToggle={onToggle}
+                    onRemove={onRemove}
+                    key={id}
+                />
+            )
+        );
+
         return (
             <div>
-                <TodoItem text="리액트 예제 해보기" />
-                <TodoItem text="TO DO LIST 만들기" />
-                <TodoItem text="리액트 공부" />
+                {todoList}
             </div>
         );
     }

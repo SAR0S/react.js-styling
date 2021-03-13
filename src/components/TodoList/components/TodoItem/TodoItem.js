@@ -10,8 +10,8 @@ class TodoItem extends Component {
                 <div className={styles.remove} onClick={(e) => {
                     e.stopProppagation();
                     onRemove(id)}
-                }> $items;</div>
-                <div className={`styles.todoText ${checked && 'checked'}`}>
+                }>$times;</div>
+                <div className={"styles.todoText" + checked && 'checked'}>
                     <div>{text}</div>
                 </div>
                 {
