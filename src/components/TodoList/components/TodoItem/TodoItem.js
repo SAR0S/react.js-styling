@@ -2,15 +2,20 @@ import React, { Component } from 'react';
 import styles from './TodoItem.module.css';
 
 class TodoItem extends Component {
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props.checked !== nextProps.checked;
+    }
+
     render() {
         const { text, checked, id, onToggle, onRemove } = this.props;
 
         return (
             <div className={styles.todoItem} onClick={()=> onToggle(id)}>
                 <div className={styles.remove} onClick={(e) => {
-                    e.stopProppagation();
+                    e.stopPropagation();
                     onRemove(id)}
-                }>$times;</div>
+                }>X</div>
                 <div className={"styles.todoText" + checked && 'checked'}>
                     <div>{text}</div>
                 </div>
